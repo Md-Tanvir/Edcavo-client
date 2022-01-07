@@ -14,7 +14,7 @@ const Reviews = () => {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+      
         speed: 2000,
         autoplaySpeed: 2000,
         cssEase: "linear",
@@ -47,7 +47,7 @@ const Reviews = () => {
       };
       return (
         <div className="container py-5">
-          <h1 className="text-center mb-5">Associated With</h1>
+          <h1 className="text-center mb-5">Our Students Says</h1>
           <Slider {...settings}>
             <div className="d-flex justify-content-center">
               <img src={s1} alt="" />

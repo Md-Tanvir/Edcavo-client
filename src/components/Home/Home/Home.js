@@ -3,6 +3,7 @@ import "./Home.css";
 import heroImg from "../../../image/hero-img.png";
 import Sliders from "../Sliders/Sliders";
 import Course from "../Course/Course";
+import Reviews from "../Reviews/Reviews";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Reviews></Reviews>
     </div>
   );
 };
