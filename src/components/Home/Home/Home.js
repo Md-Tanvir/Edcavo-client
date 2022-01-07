@@ -1,10 +1,12 @@
 import React from "react";
 import "./Home.css";
 import heroImg from "../../../image/hero-img.png";
+import Sliders from "../Sliders/Sliders";
 
 const Home = () => {
   return (
     <div>
+        {/* Hero Area */}
       <div className="container-fluid hero-area">
         <div className="container">
           <div className="row py-5 justify-content-between align-items-center">
@@ -18,6 +20,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+   <Sliders></Sliders>
+
+
     </div>
   );
 };
