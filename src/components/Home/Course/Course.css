@@ -1,6 +1,10 @@
+.course-btn{
+    background-color: #0c8b51;
+    color: white;
+}
 .course-btn:hover {
-  background-color: #0c8b51;
-  border-color: #0c8b51;
+    background-color: #2ba870;
+    color: white;
 }
 .course-price {
   color: #0c8b51;
@@ -12,4 +16,9 @@
 }
 .ins-name{
     font-weight: 700;
+}
+.border-green{
+    width: 150px;
+    background-color: #0c8b51;
+    height: 5px;
 }

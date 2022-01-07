@@ -12,6 +12,7 @@ const Courses = () => {
     <div>
     <div className="container py-5">
       <h1 className="text-center my-3">Explore Popular Courses</h1>
+      <div className='border-green mx-auto'></div>
       <div className="mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
         {courses?.map((course) => (
           <div className="col">
