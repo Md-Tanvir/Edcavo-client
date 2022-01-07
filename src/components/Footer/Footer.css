@@ -1,0 +1,15 @@
+.footer-area {
+  background-color: #d0f4e4;
+  padding: 60px 0px 10px 0px;
+}
+.input-footer {
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+.btn-footer {
+  background-color: #2ba870;
+  color: white;
+  font-size: 18px;
+}

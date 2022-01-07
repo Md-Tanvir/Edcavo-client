@@ -2,12 +2,8 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import s1 from "../../../image/1.png";
-import s2 from "../../../image/2.png";
-import s3 from "../../../image/3.png";
-import s4 from "../../../image/4.png";
-import s5 from "../../../image/5.png";
 import Rating from "react-rating";
+import './Review.css'
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -20,7 +16,7 @@ const Reviews = () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -29,7 +25,7 @@ const Reviews = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
@@ -57,7 +53,7 @@ const Reviews = () => {
       <h1 className="text-center mb-5">Our Students Says</h1>
       <Slider {...settings}>
         {reviews.map((review) => (
-          <div className='p-3 border'>
+          <div className='p-4 border review-body h-100'>
             <h3 className="text-center">{review.name}</h3>
             <p>{review.text}</p>
             <h5 className="text-center">

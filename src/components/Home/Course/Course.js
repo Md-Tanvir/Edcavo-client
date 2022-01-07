@@ -12,7 +12,7 @@ const Course = () => {
     <div>
       <div className="container py-5">
         <h2 className="text-center my-3">Explore Popular Courses</h2>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {courses?.map((course) => (
             <div className="col">
               <div className="card h-100">
@@ -25,12 +25,13 @@ const Course = () => {
                   <hr />
                   <div className="row justify-content-between">
                     <div className="col-4 d-flex justify-content-around align-items-center">
-                      <img src={course?.instructorImg} alt="" />
+                      <img src={course?.instructorImg} className='img-fluid' alt="" />
                       <p className="mb-0">{course?.instructorName}</p>
                     </div>
                     <div className="col-5">
                     
                       <p>{course?.lessons}</p>
+                      <p>{course.}</p>
                     </div>
                   </div>
                 </div>
