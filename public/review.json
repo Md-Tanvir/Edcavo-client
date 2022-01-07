@@ -13,5 +13,10 @@
        "name":"Alex 3",
        "rating":"4.5",
        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum ratione qui, ut adipisci velit magni impedit explicabo, voluptatum repellat quo. Pariatur at numquam accusantium."
+    },
+    {
+       "name":"Alex 4",
+       "rating":"4.2",
+       "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum ratione qui, ut adipisci velit magni impedit explicabo, voluptatum repellat quo. Pariatur at numquam accusantium."
     }
  ]
