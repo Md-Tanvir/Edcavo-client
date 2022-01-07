@@ -1,0 +1,15 @@
+.course-btn:hover {
+  background-color: #0c8b51;
+  border-color: #0c8b51;
+}
+.course-price {
+  color: #0c8b51;
+  font-weight: 600;
+  word-spacing: 1.5em;
+}
+.ins-img{
+    border-radius: 50%;
+}
+.ins-name{
+    font-weight: 700;
+}

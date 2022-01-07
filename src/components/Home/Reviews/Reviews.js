@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from "react-rating";
-import './Review.css'
+import "./Review.css";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -49,11 +49,11 @@ const Reviews = () => {
     ],
   };
   return (
-    <div className="container py-5">
+    <div className="container py-5 mb-3">
       <h1 className="text-center mb-5">Our Students Says</h1>
       <Slider {...settings}>
         {reviews.map((review) => (
-          <div className='p-4 border review-body h-100'>
+          <div className="p-4 border review-body h-100">
             <h3 className="text-center">{review.name}</h3>
             <p>{review.text}</p>
             <h5 className="text-center">
