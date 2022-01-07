@@ -25,6 +25,19 @@ const Home = () => {
       <Sliders></Sliders>
       {/* home course */}
       <Course></Course>
+      {/* Offer section */}
+
+      <div className="container py-5 d-flex justify-content-center">
+        <div className="row offer-area">
+          <div className="col-7">
+            <h6>JOIN WITH US</h6>
+            <h4>20% Offer Running - Join Today</h4>
+          </div>
+          <div className="col-5 text-center">
+            <button className="hero-btn">Get Started</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
