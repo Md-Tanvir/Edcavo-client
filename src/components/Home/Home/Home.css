@@ -3,5 +3,24 @@
 }
 .hero-img{
     max-width: 550px;
+    min-width: 300px;
 }
-.hero-text 
+.hero-text h1{
+    font-size: 53px;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+.hero-btn{
+    font-size: 16px;
+    line-height: 38px;
+    font-weight: 700;
+    padding: 8px 30px;
+    border-radius: 4px;
+    background-color: #0c8b51;
+    border-color: transparent;
+    color: #ffffff;
+    transition: all .5s;
+}
+.hero-btn:hover{
+    background-color: #2ba870;
+}
