@@ -28,7 +28,7 @@ const useFirebase = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        // saveUser(user.email, user.displayName, "PUT");
+        saveUser(user.email, user.displayName, "PUT");
         setAuthError("");
         const destination = location?.state?.from || "/dashboard";
         history.replace(destination);
@@ -48,7 +48,7 @@ const useFirebase = () => {
         const newUser = { email, displayName: name };
         setUser(newUser);
         //Save User to data base
-        // saveUser(email, name, "POST");
+        saveUser(email, name, "POST");
 
         // send Name to firebase after creation
         updateProfile(auth.currentUser, {
@@ -109,7 +109,7 @@ const useFirebase = () => {
 
   //FOR CHECKING ADMIN OR NOT
   useEffect(() => {
-    fetch(`https://thawing-forest-88832.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -117,7 +117,7 @@ const useFirebase = () => {
   // save user data on mongodb
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://thawing-forest-88832.herokuapp.com/users", {
+    fetch("http://localhost:5000/users", {
       method: method,
       headers: {
         "content-type": "application/json",
