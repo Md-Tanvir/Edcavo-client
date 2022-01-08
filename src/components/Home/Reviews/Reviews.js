@@ -50,7 +50,8 @@ const Reviews = () => {
   };
   return (
     <div className="container py-5 mb-3">
-      <h1 className="text-center mb-5">Our Students Says</h1>
+      <h1 className="text-center mb-3">Our Students Says</h1>
+      <div className='border-green mx-auto mb-5'></div>
       <Slider {...settings}>
         {reviews.map((review) => (
           <div className="p-4 border review-body h-100">

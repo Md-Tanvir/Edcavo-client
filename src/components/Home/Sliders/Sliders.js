@@ -47,7 +47,8 @@ const Sliders = () => {
   };
   return (
     <div className="container py-5">
-      <h1 className="text-center mb-5">Associated With</h1>
+      <h1 className="text-center mb-3">Associated With</h1>
+      <div className='border-green mx-auto mb-5'></div>
       <Slider {...settings}>
         <div className="d-flex justify-content-center">
           <img src={s1} alt="" />

@@ -5,6 +5,8 @@ import Home from "./components/Home/Home/Home";
 import Courses from "./components/Courses/Courses";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
           </Route>
           <Route path="/about">
             <About></About>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+           <Register></Register>
           </Route>
         </Switch>
         <Footer></Footer>

@@ -1,13 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
-import logo from '../../image/logo.png'
+import logo from "../../image/logo.png";
 
 const Header = () => {
-    const style = {
-        textDecoration: "none",
- 
-      };
+  const style = {
+    textDecoration: "none",
+  };
   return (
     <div>
       <div className="menubar ">
@@ -30,6 +29,9 @@ const Header = () => {
                   </NavLink>
                   <NavLink to="/about">
                     <li>About</li>
+                  </NavLink>
+                  <NavLink to="/login">
+                    <li>Login</li>
                   </NavLink>
                 </ul>
               </nav>
@@ -70,6 +72,9 @@ const Header = () => {
                       </NavLink>
                       <NavLink to="/about">
                         <li>About</li>
+                      </NavLink>
+                      <NavLink to="/login">
+                        <li>Login</li>
                       </NavLink>
                     </>
                   </ul>
