@@ -5,7 +5,7 @@ const ManageProduct = () => {
 
   // Getting all Courses
   useEffect(() => {
-    fetch("https://thawing-forest-88832.herokuapp.com/courses")
+    fetch("http://localhost:5000/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageProduct = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the product?");
     if (action) {
-      fetch(`https://thawing-forest-88832.herokuapp.com/delteProduct/${id}`, {
+      fetch(`http://localhost:5000/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -30,7 +30,7 @@ const ManageProduct = () => {
 
   return (
     <div>
-      <h2 className="text-center">All The Courses</h2>
+      <h2 className="text-center mb-5">All The Courses</h2>
       {/* spinner */}
       {!courses && (
         <div class="d-flex justify-content-center">
@@ -50,14 +50,14 @@ const ManageProduct = () => {
                 alt="..."
               />
               <div className="card-body">
-                <h3 className="card-title">{course?.title}</h3>
+                <h5 className="card-title">{course?.title}</h5>
                 <h5>$ {course?.newPrice}</h5>
 
                 <button
                   onClick={() => handleDelete(course?._id)}
-                  className="btn btn-danger float-end"
+                  className="btn btn-danger mb-0 float-end"
                 >
-                  <i class="fa-regular fa-trash-can"></i>
+                  <i class="fa-regular fa-trash-can"></i> Delete Course
                 </button>
               </div>
             </div>
