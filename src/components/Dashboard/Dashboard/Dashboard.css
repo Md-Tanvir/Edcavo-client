@@ -1,0 +1,11 @@
+.dash-nav h5{
+    color: black;
+    text-align: center;
+    padding: 13px 5px;
+    border-bottom: 1px solid #0c8b51;
+    margin-bottom: 0;
+}
+.dash-nav h5:hover{
+    background-color: #0c8b51;
+    color: white;
+}

@@ -3,8 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import './Booking.css'
-
+import "./Booking.css";
 
 const Booking = () => {
   const { courseId } = useParams();
@@ -51,87 +50,88 @@ const Booking = () => {
   return (
     <div className="py-5">
       {/* spinner */}
-      {!course && (
-          <div class="d-flex justify-content-center my-5 pb-5">
-            <div class="spinner-grow" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
+      {!course ? (
+        <div class="d-flex justify-content-center my-5 pb-5">
+          <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
-        )}
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-6">
-            <div key={course?._id} className="col">
-              <div className="card h-100">
-                <img
-                  src={course?.img}
-                  style={{ height: "400px", objectFit: "cover" }}
-                  className="card-img-top"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h2 className="card-title mb-3">{course?.title}</h2>
-                  <div className="row d-flex align-items-center">
-                    <div className="col-4  justify-content-between d-flex align-items-center">
-                      <img
-                        src={course?.instructorImg}
-                        className="img-fluid ins-img"
-                        alt=""
-                      />
-                      <h5 className="mb-0">{course?.instructorName}</h5>
+        </div>
+      ) : (
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <div key={course?._id} className="col">
+                <div className="card h-100">
+                  <img
+                    src={course?.img}
+                    style={{ height: "400px", objectFit: "cover" }}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="card-body">
+                    <h2 className="card-title mb-3">{course?.title}</h2>
+                    <div className="row d-flex align-items-center">
+                      <div className="col-4  justify-content-between d-flex align-items-center">
+                        <img
+                          src={course?.instructorImg}
+                          className="img-fluid ins-img"
+                          alt=""
+                        />
+                        <h5 className="mb-0">{course?.instructorName}</h5>
+                      </div>
+                      <div className="col-8">
+                        <h5 className="text-end">Price: ${course?.newPrice}</h5>
+                        <p className="text-end mb-0">
+                          <i className="fas fa-book me-1 "></i>{" "}
+                          {course?.lessons} Lessons
+                        </p>
+                      </div>
                     </div>
-                    <div className="col-8">
-                      <h5 className="text-end">Price: ${course?.newPrice}</h5>
-                      <p className="text-end mb-0">
-                        <i className="fas fa-book me-1 "></i> {course?.lessons}{" "}
-                        Lessons
-                      </p>
-                    </div>
+                    <hr />
+                    <p className="card-text ">{course?.description}</p>
                   </div>
-                  <hr />
-                  <p className="card-text ">{course?.description}</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-6 col-12">
-            <h2 className="text-center mb-3">Confirm Your Order</h2>
-            <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-              <input
-                type="text"
-                defaultValue={user.displayName}
-                {...register("displayName")}
-                className="product-input"
-              />
+            <div className="col-md-6 col-12">
+              <h2 className="text-center mb-3">Confirm Your Order</h2>
+              <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+                <input
+                  type="text"
+                  defaultValue={user.displayName}
+                  {...register("displayName")}
+                  className="product-input"
+                />
 
-              <input
-                type="email"
-                defaultValue={user.email}
-                {...register("email")}
-                className="product-input"
-              />
+                <input
+                  type="email"
+                  defaultValue={user.email}
+                  {...register("email")}
+                  className="product-input"
+                />
 
-              <input
-                placeholder="Mobile no."
-                type="tel"
-                {...register("mobile")}
-                className="product-input"
-              />
-              <input
-                placeholder="Address"
-                type="text"
-                {...register("address")}
-                className="product-input"
-              />
-              <input
-                type="submit"
-                value="Order Now"
-                className="btn btn-submit"
-              />
-            </form>
+                <input
+                  placeholder="Mobile no."
+                  type="tel"
+                  {...register("mobile")}
+                  className="product-input"
+                />
+                <input
+                  placeholder="Address"
+                  type="text"
+                  {...register("address")}
+                  className="product-input"
+                />
+                <input
+                  type="submit"
+                  value="Order Now"
+                  className="btn btn-submit"
+                />
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
