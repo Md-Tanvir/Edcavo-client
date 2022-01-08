@@ -31,8 +31,8 @@ const Booking = () => {
     data.newPrice = course.newPrice;
     data.img = course.img;
 
-    // sending to data base
-    fetch("", {
+    // sending order to database
+    fetch("http://localhost:5000/confirmOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
