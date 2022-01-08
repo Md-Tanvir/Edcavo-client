@@ -8,7 +8,7 @@ import "./Review.css";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("/review.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -55,7 +55,7 @@ const Reviews = () => {
       <Slider {...settings}>
         {reviews.map((review) => (
           <div className="p-4 border review-body h-100">
-            <h3 className="text-center">{review.name}</h3>
+            <h4 className="text-center">{review.name}</h4>
             <p>{review.text}</p>
             <h5 className="text-center">
               <Rating

@@ -13,11 +13,11 @@ const Booking = () => {
 
   // for getting specific course
   useEffect(() => {
-    const url = `/course.json`;
+    const url = `http://localhost:5000/courses`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        const p = data.find((p) => p.id == courseId);
+        const p = data.find((p) => p._id == courseId);
 
         setCourse(p);
       });
@@ -64,15 +64,15 @@ const Booking = () => {
                 <div className="card-body">
                   <h2 className="card-title mb-3">{course?.title}</h2>
                   <div className="row d-flex align-items-center">
-                    <div className="col-3  justify-content-between d-flex align-items-center">
+                    <div className="col-4  justify-content-between d-flex align-items-center">
                       <img
                         src={course?.instructorImg}
                         className="img-fluid ins-img"
                         alt=""
                       />
-                      <h4 className="mb-0">{course?.instructorName}</h4>
+                      <h5 className="mb-0">{course?.instructorName}</h5>
                     </div>
-                    <div className="col-9">
+                    <div className="col-8">
                       <h5 className="text-end">Price: ${course?.newPrice}</h5>
                       <p className="text-end mb-0">
                         <i className="fas fa-book me-1 "></i> {course?.lessons}{" "}

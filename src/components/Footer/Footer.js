@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="col-md-6 col-12 col-lg-3">
             <h2>Subscribe</h2>
             <div>
-              <input className='input-footer' type="text" name="" id="" placeholder="Email Address" /> <br /> <br />
+              <input className='input-footer mb-2' type="text" name="" id="" placeholder="Email Address" /> <br /> 
               <button className='btn btn-footer'>Submit</button>
             </div>
           </div>
