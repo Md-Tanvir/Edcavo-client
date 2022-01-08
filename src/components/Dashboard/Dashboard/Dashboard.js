@@ -23,13 +23,13 @@ const Dashboard = () => {
       <div className="py-5 row">
         <div className="">
           <button
-            className="btn btn-primary"
+            className="btn btn-dark float-end"
             data-bs-toggle="offcanvas"
             href="#offcanvasExample"
             role="button"
             aria-controls="offcanvasExample"
           >
-            Dashboard
+            Check Dashboard
           </button>
 
           <div
