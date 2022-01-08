@@ -40,8 +40,8 @@ const Dashboard = () => {
             id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel"
           >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="offcanvasExampleLabel">
                 DashBoard
               </h5>
               <button
@@ -55,8 +55,8 @@ const Dashboard = () => {
               <div className="dash-nav">
                 {admin && (
                   <>
-                    <NavLink to={`${url}/makeAdmin`}>
-                      <h5>Make Admin</h5>
+                    <NavLink to={`${url}/manageAllOrders`}>
+                      <h5>Manage All Orders</h5>
                     </NavLink>
                     <NavLink to={`${url}/manageProduct`}>
                       <h5>Manage Products</h5>
@@ -64,8 +64,8 @@ const Dashboard = () => {
                     <NavLink to={`${url}/addCourse`}>
                       <h5>Add Course</h5>
                     </NavLink>
-                    <NavLink to={`${url}/manageAllOrders`}>
-                      <h5>Manage All Orders</h5>
+                    <NavLink to={`${url}/makeAdmin`}>
+                      <h5>Make Admin</h5>
                     </NavLink>
                   </>
                 )}
@@ -80,6 +80,11 @@ const Dashboard = () => {
                     </NavLink>
                   </>
                 )}
+                <div className="text-center">
+                  <button onClick={logout} className="btn btn-danger mt-3">
+                    Log Out
+                  </button>
+                </div>
               </div>
             </div>
           </div>

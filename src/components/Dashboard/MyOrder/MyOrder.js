@@ -35,9 +35,9 @@ const MyOrder = () => {
       <h2 className="text-center mb-5">Your Orders</h2>
       {/* spinner */}
       {!products && (
-        <div class="d-flex justify-content-center">
-          <div class="spinner-grow my-5" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="d-flex justify-content-center">
+          <div className="spinner-grow my-5" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       )}
@@ -61,7 +61,7 @@ const MyOrder = () => {
                   onClick={() => handleCancel(pd?._id)}
                   className="btn btn-danger float-end"
                 >
-                  <i class="fa-regular fa-trash-can"></i> Cancel
+                  <i className="fa-regular fa-trash-can"></i> Cancel
                 </button>
               </div>
             </div>

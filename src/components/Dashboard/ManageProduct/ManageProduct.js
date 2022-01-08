@@ -33,9 +33,9 @@ const ManageProduct = () => {
       <h2 className="text-center mb-5">All The Courses</h2>
       {/* spinner */}
       {!courses && (
-        <div class="d-flex justify-content-center">
-          <div class="spinner-grow my-5" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="d-flex justify-content-center">
+          <div className="spinner-grow my-5" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       )}
@@ -57,7 +57,7 @@ const ManageProduct = () => {
                   onClick={() => handleDelete(course?._id)}
                   className="btn btn-danger mb-0 float-end"
                 >
-                  <i class="fa-regular fa-trash-can"></i> Delete Course
+                  <i className="fa-regular fa-trash-can"></i> Delete Course
                 </button>
               </div>
             </div>

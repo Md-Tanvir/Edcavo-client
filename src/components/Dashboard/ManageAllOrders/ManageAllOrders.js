@@ -52,9 +52,9 @@ const ManageAllOrders = () => {
           )}
   
           {!allOrders && (
-            <div class="d-flex justify-content-center my-5 pb-5">
-              <div class="spinner-grow" role="status">
-                <span class="visually-hidden">Loading...</span>
+            <div className="d-flex justify-content-center my-5 pb-5">
+              <div className="spinner-grow" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             </div>
           )}
@@ -86,7 +86,7 @@ const ManageAllOrders = () => {
                         onClick={() => handleDelete(order._id)}
                         className="btn btn-danger float-end"
                       >
-                        <i class="fa-regular fa-trash-can"></i>
+                        <i className="fa-regular fa-trash-can"></i>
                       </button>
                     </div>
                   </div>

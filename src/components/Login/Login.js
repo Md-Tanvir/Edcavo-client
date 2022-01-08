@@ -52,9 +52,9 @@ const Login = () => {
             </button>
             <div className="mx-auto" style={{ maxWidth: "350px" }}>
               {isLoading && (
-                <div class="d-flex justify-content-center">
-                  <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="d-flex justify-content-center">
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
                   </div>
                 </div>
               )}
@@ -66,7 +66,7 @@ const Login = () => {
           <h6 className="my-3 text-center">
             Are you new? <Link to="/register">Register Here</Link>
           </h6>
-          <div class="text-center">
+          <div className="text-center">
             <button
               className="btn btn-danger mx-auto"
               onClick={handleGoogleSignIn}

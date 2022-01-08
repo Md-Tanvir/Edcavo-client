@@ -60,9 +60,9 @@ const Register = () => {
               Register
             </button>
             <div className="mx-auto" style={{ maxWidth: "350px" }}>
-              {isLoading &&  <div class="d-flex justify-content-center">
-                  <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
+              {isLoading &&  <div className="d-flex justify-content-center">
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
                   </div>
                 </div>}
               {user?.email && <p>User Created successfully!</p>}
@@ -73,7 +73,7 @@ const Register = () => {
           <h6 className="my-3 text-center">
             Already Registered? <Link to="/login">Login</Link>
           </h6>
-          <div class="text-center">
+          <div className="text-center">
             <button
               className="btn btn-danger mx-auto"
               onClick={handleGoogleSignIn}

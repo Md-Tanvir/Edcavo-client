@@ -15,9 +15,9 @@ const Course = () => {
     <div>
       {/* spinner */}
       {status === "pending" ? (
-        <div class="d-flex justify-content-center my-5 pb-5">
-          <div class="spinner-grow" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="d-flex justify-content-center my-5 pb-5">
+          <div className="spinner-grow" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
@@ -27,7 +27,7 @@ const Course = () => {
             <div className="border-green mx-auto"></div>
             <div className="mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
               {courses?.slice(0, 6)?.map((course) => (
-                <div className="col">
+                <div key={course?._id} className="col">
                   <div className="card h-100">
                     <img src={course?.img} className="card-img-top" alt="..." />
                     <div className="card-body">

@@ -56,7 +56,7 @@ const Reviews = () => {
       <div className='border-green mx-auto mb-5'></div>
       <Slider {...settings}>
         {reviews.map((review) => (
-          <div className="p-4 border review-body h-100">
+          <div key={review?._id} className="p-4 border review-body h-100">
             <h4 className="text-center">{review.name}</h4>
             <p>{review.text}</p>
             <h5 className="text-center">
