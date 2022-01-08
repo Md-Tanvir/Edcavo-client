@@ -1,31 +1,38 @@
-.hero-area{
-    background-image: url(../../../image/banner1.jpg);
+.hero-area {
+  background-image: url(../../../image/banner1.jpg);
 }
-.hero-img{
-    max-width: 550px;
-    min-width: 300px;
+.hero-img {
+  max-width: 550px;
+  min-width: 300px;
 }
-.hero-text h1{
-    font-size: 53px;
-    line-height: 1.5em;
-    font-weight: 700;
+.hero-text h1 {
+  font-size: 53px;
+  line-height: 1.5em;
+  font-weight: 700;
 }
-.hero-btn{
-    font-size: 16px;
-    line-height: 38px;
-    font-weight: 700;
-    padding: 8px 30px;
-    border-radius: 4px;
-    background-color: #0c8b51;
-    border-color: transparent;
-    color: #ffffff;
-    transition: all .5s;
+.hero-btn {
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: 700;
+  padding: 8px 30px;
+  border-radius: 4px;
+  background-color: #0c8b51;
+  border-color: transparent;
+  color: #ffffff;
+  transition: all 0.5s;
 }
-.hero-btn:hover{
-    background-color: #2ba870;
+.hero-btn:hover {
+  background-color: #2ba870;
 }
-.offer-area{
-    background-image: url(../../../image/offer.jpg);
-    padding: 40px 20px;
-   
+.offer-area {
+  background-image: url(../../../image/offer.jpg);
+  padding: 40px 20px;
+}
+@media screen and (max-width: 475px) {
+  .hero-btn {
+    padding: 5px 5px;
+  }
+  .offer-area {
+    padding: 20px 10px;
+  }
 }

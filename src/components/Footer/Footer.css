@@ -7,6 +7,7 @@
   outline: none;
   border: none;
   font-size: 18px;
+  max-width: 300px;
 }
 .btn-footer {
   background-color: #2ba870;
