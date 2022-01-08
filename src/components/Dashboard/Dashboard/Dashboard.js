@@ -6,6 +6,8 @@ import {
   Switch,
   useRouteMatch,
 } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import AdminRoute from "../../AdminRoute/AdminRoute";
 import AddCourse from "../AddCourse/AddCourse";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
@@ -13,17 +15,17 @@ import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProduct from "../ManageProduct/ManageProduct";
 import MyOrder from "../MyOrder/MyOrder";
 import Review from "../Review/Review";
-import './Dashboard.css'
+import "./Dashboard.css";
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
-
+  const { admin, logout } = useAuth();
   return (
     <div className="container">
       <div className="py-5 row">
         <div className="">
           <button
-            className="btn btn-dark float-end"
+            className="btn btn-dash float-end mb-5 mb-md-0"
             data-bs-toggle="offcanvas"
             href="#offcanvasExample"
             role="button"
@@ -50,25 +52,34 @@ const Dashboard = () => {
               ></button>
             </div>
             <div className="offcanvas-body">
-              <div className='dash-nav'>
-                <NavLink to={`${url}/makeAdmin`}>
-                  <h5 className="monthly-btn">Make Admin</h5>
-                </NavLink>
-                <NavLink to={`${url}/manageProduct`}>
-                  <h5 className="annual-btn">Manage Products</h5>
-                </NavLink>
-                <NavLink to={`${url}/addCourse`}>
-                  <h5 className="annual-btn">Add Course</h5>
-                </NavLink>
-                <NavLink to={`${url}/review`}>
-                  <h5 className="annual-btn">Give Review</h5>
-                </NavLink>
-                <NavLink to={`${url}/myOrder`}>
-                  <h5 className="annual-btn">My Order</h5>
-                </NavLink>
-                <NavLink to={`${url}/manageAllOrders`}>
-                  <h5 className="annual-btn">Manage All Orders</h5>
-                </NavLink>
+              <div className="dash-nav">
+                {admin && (
+                  <>
+                    <NavLink to={`${url}/makeAdmin`}>
+                      <h5>Make Admin</h5>
+                    </NavLink>
+                    <NavLink to={`${url}/manageProduct`}>
+                      <h5>Manage Products</h5>
+                    </NavLink>
+                    <NavLink to={`${url}/addCourse`}>
+                      <h5>Add Course</h5>
+                    </NavLink>
+                    <NavLink to={`${url}/manageAllOrders`}>
+                      <h5>Manage All Orders</h5>
+                    </NavLink>
+                  </>
+                )}
+
+                {!admin && (
+                  <>
+                    <NavLink to={`${url}/myOrder`}>
+                      <h5>My Order</h5>
+                    </NavLink>
+                    <NavLink to={`${url}/review`}>
+                      <h5>Give Review</h5>
+                    </NavLink>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -79,24 +90,24 @@ const Dashboard = () => {
               <DashboardHome></DashboardHome>
             </Route>
 
-            <Route path={`${path}/makeAdmin`}>
+            <AdminRoute path={`${path}/makeAdmin`}>
               <MakeAdmin></MakeAdmin>
-            </Route>
-            <Route path={`${path}/manageProduct`}>
+            </AdminRoute>
+            <AdminRoute path={`${path}/manageProduct`}>
               <ManageProduct></ManageProduct>
-            </Route>
-            <Route path={`${path}/addCourse`}>
+            </AdminRoute>
+            <AdminRoute path={`${path}/addCourse`}>
               <AddCourse></AddCourse>
-            </Route>
+            </AdminRoute>
             <Route path={`${path}/review`}>
               <Review></Review>
             </Route>
             <Route path={`${path}/myOrder`}>
-                <MyOrder></MyOrder>
+              <MyOrder></MyOrder>
             </Route>
-            <Route path={`${path}/manageAllOrders`}>
-             <ManageAllOrders></ManageAllOrders>
-            </Route>
+            <AdminRoute path={`${path}/manageAllOrders`}>
+              <ManageAllOrders></ManageAllOrders>
+            </AdminRoute>
           </Switch>
         </div>
       </div>

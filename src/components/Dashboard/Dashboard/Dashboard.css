@@ -9,3 +9,11 @@
     background-color: #0c8b51;
     color: white;
 }
+.btn-dash{
+    background-color: #0c8b51;
+    color: white;
+}
+.btn-dash:hover{
+    background-color: #0ba35f;
+    color: white;
+}
