@@ -2,8 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "../../image/logo.png";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { logout, user } = useAuth();
+
   const style = {
     textDecoration: "none",
   };
@@ -30,9 +33,30 @@ const Header = () => {
                   <NavLink to="/about">
                     <li>About</li>
                   </NavLink>
-                  <NavLink to="/login">
-                    <li>Login</li>
-                  </NavLink>
+
+                  {user?.email && (
+                    <NavLink to="/dashboard">
+                      <li>Dashboard</li>
+                    </NavLink>
+                  )}
+                  {user?.email && <span>{user.displayName || user.email}</span>}
+
+                  {user?.email ? (
+                    <span
+                      style={{
+                        marginLeft: "15px",
+                        fontSize: "20px",
+                        cursor: "pointer",
+                      }}
+                      onClick={logout}
+                    >
+                      <i className="fas fa-sign-out-alt"></i>
+                    </span>
+                  ) : (
+                    <NavLink to="/login">
+                      <li>Login</li>
+                    </NavLink>
+                  )}
                 </ul>
               </nav>
 
@@ -73,9 +97,32 @@ const Header = () => {
                       <NavLink to="/about">
                         <li>About</li>
                       </NavLink>
-                      <NavLink to="/login">
-                        <li>Login</li>
-                      </NavLink>
+
+                      {user?.email && (
+                        <NavLink to="/dashboard">
+                          <li>Dashboard</li>
+                        </NavLink>
+                      )}
+                      {user?.email && (
+                        <span>{user.displayName || user.email}</span>
+                      )}
+
+                      {user?.email ? (
+                        <span
+                          style={{
+                            marginLeft: "15px",
+                            fontSize: "20px",
+                            cursor: "pointer",
+                          }}
+                          onClick={logout}
+                        >
+                          <i className="fas fa-sign-out-alt"></i>
+                        </span>
+                      ) : (
+                        <NavLink to="/login">
+                          <li>Login</li>
+                        </NavLink>
+                      )}
                     </>
                   </ul>
                 </div>

@@ -7,10 +7,13 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Dashboard from './components/Dashboard/Dashboard/Dashboard'
+import AuthProvider from "./Context/AuthProvider";
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -32,9 +35,13 @@ function App() {
           <Route path="/register">
            <Register></Register>
           </Route>
+          <Route path="/dashboard">
+          <Dashboard></Dashboard>
+          </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
