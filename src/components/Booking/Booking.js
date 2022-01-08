@@ -50,6 +50,14 @@ const Booking = () => {
 
   return (
     <div className="py-5">
+      {/* spinner */}
+      {!course && (
+          <div class="d-flex justify-content-center my-5 pb-5">
+            <div class="spinner-grow" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6">
