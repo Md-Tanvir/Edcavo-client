@@ -7,40 +7,41 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Dashboard from './components/Dashboard/Dashboard/Dashboard'
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import AuthProvider from "./Context/AuthProvider";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <div>
       <AuthProvider>
-      <BrowserRouter>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/courses">
-            <Courses></Courses>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/register">
-           <Register></Register>
-          </Route>
-          <Route path="/dashboard">
-          <Dashboard></Dashboard>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/courses">
+              <Courses></Courses>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+          </Switch>
+          <Footer></Footer>
+        </BrowserRouter>
       </AuthProvider>
     </div>
   );

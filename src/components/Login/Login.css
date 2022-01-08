@@ -1,0 +1,16 @@
+.login-form{
+    margin: 0 auto;
+    max-width: 350px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 40px 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+.login-area{
+    background-image: url(../../image/banner1.jpg);
+}
+.login-form input {
+    border:none ;
+    border-bottom: 1px solid #cacaca;
+    border-radius: 0;
+}
