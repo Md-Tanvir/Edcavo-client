@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -40,9 +41,11 @@ const Courses = () => {
                     <h4 className="mb-0 course-price">${course?.newPrice}</h4>
                   </div>
                   <div className="col-6 text-end">
-                    <button className="btn btn-dark course-btn">
+                    <Link to={`/booking/${course?.id}`}>
+                    <button className="btn course-btn">
                       Get Now
                     </button>
+                    </Link>
                   </div>
                 </div>
               </div>
