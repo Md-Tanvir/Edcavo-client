@@ -32,7 +32,7 @@ const MyOrder = () => {
 
   return (
     <div>
-      <h2 className="text-center">Your Orders</h2>
+      <h2 className="text-center mb-5">Your Orders</h2>
       {/* spinner */}
       {!products && (
         <div class="d-flex justify-content-center">

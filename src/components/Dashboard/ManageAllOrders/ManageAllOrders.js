@@ -48,7 +48,7 @@ const ManageAllOrders = () => {
         <div>
         <div className="container my-3">
           {allOrders && (
-            <h1 className="text-center">Total Orders: {allOrders.length}</h1>
+            <h2 className="text-center mb-5">Total Orders: {allOrders.length}</h2>
           )}
   
           {!allOrders && (

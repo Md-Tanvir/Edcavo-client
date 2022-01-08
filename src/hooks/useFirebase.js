@@ -107,6 +107,25 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  //FOR CHECKING ADMIN OR NOT
+  useEffect(() => {
+    fetch(`https://thawing-forest-88832.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
+
+  // save user data on mongodb
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("https://thawing-forest-88832.herokuapp.com/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+
   return {
     user,
     logout,

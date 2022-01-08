@@ -40,7 +40,7 @@ const Booking = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          alert("Order Successful");
+          alert("Order has been placed");
           reset();
         }
       });
