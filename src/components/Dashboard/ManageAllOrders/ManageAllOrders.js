@@ -59,7 +59,7 @@ const ManageAllOrders = () => {
             </div>
           )}
           <div className="services">
-            <div className="row row-cols-1 row-cols-md-4 g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               {allOrders?.map((order) => (
                 <div key={order._id} className="col">
                   <div className="card h-100">

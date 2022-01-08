@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ManageProduct = () => {
+const ManageCourses = () => {
   const [courses, setCourses] = useState(null);
 
   // Getting all Courses
@@ -39,7 +39,7 @@ const ManageProduct = () => {
           </div>
         </div>
       )}
-      <div className="row row-cols-2 row-cols-md-4 g-5">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
         {courses?.map((course) => (
           <div key={course._id} className="col">
             <div className="card h-100">
@@ -68,4 +68,4 @@ const ManageProduct = () => {
   );
 };
 
-export default ManageProduct;
+export default ManageCourses;

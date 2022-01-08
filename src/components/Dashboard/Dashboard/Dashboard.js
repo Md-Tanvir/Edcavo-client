@@ -12,7 +12,7 @@ import AddCourse from "../AddCourse/AddCourse";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
-import ManageProduct from "../ManageProduct/ManageProduct";
+import ManageCourses from "../ManageCourses/ManageCourses";
 import MyOrder from "../MyOrder/MyOrder";
 import Review from "../Review/Review";
 import "./Dashboard.css";
@@ -58,8 +58,8 @@ const Dashboard = () => {
                     <NavLink to={`${url}/manageAllOrders`}>
                       <h5>Manage All Orders</h5>
                     </NavLink>
-                    <NavLink to={`${url}/manageProduct`}>
-                      <h5>Manage Products</h5>
+                    <NavLink to={`${url}/manageCourses`}>
+                      <h5>Manage Courses</h5>
                     </NavLink>
                     <NavLink to={`${url}/addCourse`}>
                       <h5>Add Course</h5>
@@ -98,8 +98,8 @@ const Dashboard = () => {
             <AdminRoute path={`${path}/makeAdmin`}>
               <MakeAdmin></MakeAdmin>
             </AdminRoute>
-            <AdminRoute path={`${path}/manageProduct`}>
-              <ManageProduct></ManageProduct>
+            <AdminRoute path={`${path}/manageCourses`}>
+           <ManageCourses></ManageCourses>
             </AdminRoute>
             <AdminRoute path={`${path}/addCourse`}>
               <AddCourse></AddCourse>

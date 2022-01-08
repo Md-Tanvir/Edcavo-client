@@ -22,7 +22,7 @@ const Header = () => {
             </div>
 
             <div className="menu">
-              <nav className="d-none d-md-block">
+              <nav className="d-none d-lg-block">
                 <ul>
                   <NavLink style={style} to="/home">
                     <li>Home</li>
@@ -62,7 +62,7 @@ const Header = () => {
 
               {/* <!-- start offcanvas menu  --> */}
               <button
-                className="btn btn-light navbar d-block d-md-none "
+                className="btn btn-light navbar d-block d-lg-none "
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight"
