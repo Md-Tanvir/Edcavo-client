@@ -4,14 +4,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from "react-rating";
 import "./Review.css";
+import { fetchReviews } from "../../../Redux/slices/reviewSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
+    dispatch(fetchReviews());
   }, []);
+  const reviews = useSelector((state) => state.reviews.allReviews);
 
   const settings = {
     dots: true,

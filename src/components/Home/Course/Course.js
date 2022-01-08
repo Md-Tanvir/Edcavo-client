@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Course.css";
+import { useSelector,useDispatch } from 'react-redux';
+import { fetchCourses } from "../../../Redux/slices/courseSlice";
 
 const Course = () => {
-  const [courses, setCourses] = useState([]);
+
+  const dispatch= useDispatch()
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
+   dispatch(fetchCourses())
   }, []);
+  const courses = useSelector(state=>state.courses.allCourses)
 
   return (
     <div>
