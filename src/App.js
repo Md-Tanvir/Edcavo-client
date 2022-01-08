@@ -37,9 +37,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path='/booking/:courseId'>
+            <PrivateRoute path="/booking/:courseId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>

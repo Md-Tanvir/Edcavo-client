@@ -4,6 +4,7 @@ import heroImg from "../../../image/hero-img.png";
 import Sliders from "../Sliders/Sliders";
 import Course from "../Course/Course";
 import Reviews from "../Reviews/Reviews";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -14,7 +15,9 @@ const Home = () => {
           <div className="row py-5 justify-content-between align-items-center">
             <div className="col-12 col-lg-6 hero-text">
               <h1>WE PROUDLY TEACHING ONLINE COURSES WITH ONLINE EXPERTS.</h1>
-              <button className="hero-btn">Get Started</button>
+              <Link to='/courses'>
+                <button className="hero-btn">Get Started</button>
+              </Link>
             </div>
             <div className="d-none d-lg-block col-lg-6 text-center">
               <img src={heroImg} className="hero-img img-fluid" alt="" />

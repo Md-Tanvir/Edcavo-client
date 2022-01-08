@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import './Booking.css'
+
 
 const Booking = () => {
   const { courseId } = useParams();
@@ -20,8 +23,33 @@ const Booking = () => {
       });
   }, [courseId]);
 
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    data.email = user.email;
+    data.status = "pending";
+    data.name = course.title;
+    data.newPrice = course.newPrice;
+    data.img = course.img;
+
+    // sending to data base
+    fetch("", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Order Successful");
+          reset();
+        }
+      });
+    console.log(data);
+  };
+
   return (
-    <div className='py-5'>
+    <div className="py-5">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6">
@@ -42,12 +70,13 @@ const Booking = () => {
                         className="img-fluid ins-img"
                         alt=""
                       />
-                      <h4 className='mb-0'>{course?.instructorName}</h4>
+                      <h4 className="mb-0">{course?.instructorName}</h4>
                     </div>
                     <div className="col-9">
                       <h5 className="text-end">Price: ${course?.newPrice}</h5>
                       <p className="text-end mb-0">
-                        <i className="fas fa-book me-1 "></i> {course?.lessons} Lessons
+                        <i className="fas fa-book me-1 "></i> {course?.lessons}{" "}
+                        Lessons
                       </p>
                     </div>
                   </div>
@@ -57,7 +86,42 @@ const Booking = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-6"></div>
+          <div className="col-md-6 col-12">
+            <h2 className="text-center mb-3">Confirm Your Order</h2>
+            <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+              <input
+                type="text"
+                defaultValue={user.displayName}
+                {...register("displayName")}
+                className="product-input"
+              />
+
+              <input
+                type="email"
+                defaultValue={user.email}
+                {...register("email")}
+                className="product-input"
+              />
+
+              <input
+                placeholder="Mobile no."
+                type="tel"
+                {...register("mobile")}
+                className="product-input"
+              />
+              <input
+                placeholder="Address"
+                type="text"
+                {...register("address")}
+                className="product-input"
+              />
+              <input
+                type="submit"
+                value="Order Now"
+                className="btn btn-submit"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </div>
