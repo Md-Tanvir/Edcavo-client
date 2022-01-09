@@ -11,6 +11,7 @@ import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Booking from "./components/Booking/Booking";
+import Error from "./components/Error/Error";
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
+              <Route path="*">
+              <Error></Error>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

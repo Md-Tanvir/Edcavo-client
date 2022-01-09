@@ -35,7 +35,7 @@ const Dashboard = () => {
           </button>
 
           <div
-            className="offcanvas offcanvas-start"
+            className="offcanvas main-canvas offcanvas-start"
             tabIndex="-1"
             id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel"
@@ -99,7 +99,7 @@ const Dashboard = () => {
               <MakeAdmin></MakeAdmin>
             </AdminRoute>
             <AdminRoute path={`${path}/manageCourses`}>
-           <ManageCourses></ManageCourses>
+              <ManageCourses></ManageCourses>
             </AdminRoute>
             <AdminRoute path={`${path}/addCourse`}>
               <AddCourse></AddCourse>
