@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer-area">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 col-12 col-lg-3">
+          <div className="col-md-6 col-12 col-lg-3 " >
             <h2>About Us</h2>
             <p>
               We denounce with righteous indi gnation and dislike men who are so

@@ -12,7 +12,7 @@ const AddCourse = () => {
 
   // for adding new Course
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addCourse", {
+    fetch("https://blooming-springs-47114.herokuapp.com/addCourse", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

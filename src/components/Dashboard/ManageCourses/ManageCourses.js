@@ -5,7 +5,7 @@ const ManageCourses = () => {
 
   // Getting all Courses
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://blooming-springs-47114.herokuapp.com/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageCourses = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the product?");
     if (action) {
-      fetch(`http://localhost:5000/${id}`, {
+      fetch(`https://blooming-springs-47114.herokuapp.com/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

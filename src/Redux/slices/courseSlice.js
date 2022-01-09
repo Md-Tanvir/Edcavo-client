@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchCourses = createAsyncThunk(
   "course/fetchCourses",
   async () => {
-    const response = await fetch("http://localhost:5000/courses").then((res) =>
+    const response = await fetch("https://blooming-springs-47114.herokuapp.com/courses").then((res) =>
       res.json()
     );
     return response;

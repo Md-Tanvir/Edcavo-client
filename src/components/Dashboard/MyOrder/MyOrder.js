@@ -7,7 +7,7 @@ const MyOrder = () => {
 
   // get orders of logged user
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${email}`)
+    fetch(`https://blooming-springs-47114.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -16,7 +16,7 @@ const MyOrder = () => {
   const handleCancel = (id) => {
     const action = window.confirm("Do you want to cancel the product?");
     if (action) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://blooming-springs-47114.herokuapp.com/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

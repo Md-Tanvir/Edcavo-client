@@ -13,7 +13,7 @@ const Review = () => {
 
   // for adding review
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://blooming-springs-47114.herokuapp.com/reviews", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

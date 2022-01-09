@@ -28,7 +28,7 @@ const Register = () => {
         <div className='login-area py-5'>
             
             <div className="container">
-        <div>
+        <div data-aos="fade-up">
           <form className="login-form" onSubmit={handleLoginSubmit}>
             <h2 className='text-center'>REGISTER</h2>
             <input

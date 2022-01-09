@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Course.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -22,10 +22,10 @@ const Course = () => {
         </div>
       ) : (
         <>
-          <div className="container py-5">
+          <div className="container py-5" >
             <h1 className="text-center my-3">Explore Popular Courses</h1>
             <div className="border-green mx-auto"></div>
-            <div className="mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
+            <div data-aos="fade-up" className="mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
               {courses?.slice(0, 6)?.map((course) => (
                 <div key={course?._id} className="col">
                   <div className="card h-100">

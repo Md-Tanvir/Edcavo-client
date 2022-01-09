@@ -46,7 +46,7 @@ const Sliders = () => {
     ],
   };
   return (
-    <div className="container py-5">
+    <div className="container py-5" data-aos="fade-up">
       <h1 className="text-center mb-3">Associated With</h1>
       <div className='border-green mx-auto mb-5'></div>
       <Slider {...settings}>

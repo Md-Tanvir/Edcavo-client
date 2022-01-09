@@ -13,13 +13,13 @@ const Home = () => {
       <div className="container-fluid hero-area">
         <div className="container">
           <div className="row py-5 justify-content-between align-items-center">
-            <div className="col-12 col-lg-6 hero-text">
+            <div className="col-12 col-lg-6 hero-text" data-aos="fade-left">
               <h1>WE PROUDLY TEACHING ONLINE COURSES WITH ONLINE EXPERTS.</h1>
               <Link to='/courses'>
                 <button className="hero-btn">Get Started</button>
               </Link>
             </div>
-            <div className="d-none d-lg-block col-lg-6 text-center">
+            <div className="d-none d-lg-block col-lg-6 text-center" data-aos="fade-right">
               <img src={heroImg} className="hero-img img-fluid" alt="" />
             </div>
           </div>
@@ -32,7 +32,7 @@ const Home = () => {
       {/* Offer section */}
 
       <div className="container py-5 d-flex justify-content-center">
-        <div className="row offer-area">
+        <div className="row offer-area" data-aos="fade-up">
           <div className="col-7">
             <h6>JOIN WITH US</h6>
             <h4>20% Offer Running - Join Today</h4>

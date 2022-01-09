@@ -12,7 +12,7 @@ const Booking = () => {
 
   // for getting specific course
   useEffect(() => {
-    const url = `http://localhost:5000/courses`;
+    const url = `https://blooming-springs-47114.herokuapp.com/courses`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -32,7 +32,7 @@ const Booking = () => {
     data.img = course.img;
 
     // sending order to database
-    fetch("http://localhost:5000/confirmOrder", {
+    fetch("https://blooming-springs-47114.herokuapp.com/confirmOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
