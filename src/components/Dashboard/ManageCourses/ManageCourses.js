@@ -14,7 +14,7 @@ const ManageCourses = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the product?");
     if (action) {
-      fetch(`https://blooming-springs-47114.herokuapp.com/${id}`, {
+      fetch(`https://blooming-springs-47114.herokuapp.com/deleteCourse/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
