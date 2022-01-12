@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
    const handleDelete = (id) => {
     const action = window.confirm("Do you want to cancel the order?");
     if (action) {
-      fetch(`https://blooming-springs-47114.herokuapp.com/deleteOrder/${id}`, {
+      fetch(`https://blooming-springs-47114.herokuapp.com/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
